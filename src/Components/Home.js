@@ -1,7 +1,10 @@
-export default function Home() {
+export default function Home({allVideos}) {
+    console.log(allVideos);
     return (
         <div>
-            <h1>Here</h1>
+            {/* {allVideos.items.map((video) => {return (
+                <h1>{video.etag}</h1>
+            )})} */}
         </div>
     )
 }
