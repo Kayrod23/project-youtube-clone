@@ -1,0 +1,52 @@
+header {
+    background: red;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 5% 10px;
+  }
+  
+  header article,
+  header aside {
+    width: 50%;
+  }
+  
+  header h1 {
+    color: white;
+    height: auto;
+    margin: 0;
+    font-size: 50px;
+    
+  }
+  
+  
+  header h1 a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  header ul li {
+    display: inline-block;
+    color: white;
+    font-family: var(--font-zen);
+    font-size: 20px;
+    padding: 0 30px;
+  }
+  
+  header ul li a {
+    color: white;
+    border-bottom: 2px solid white;
+    font-weight: 500;
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+  
+  header ul li a:hover {
+    color: black;
+    border-bottom: 2px solid  var(--black);
+  }
