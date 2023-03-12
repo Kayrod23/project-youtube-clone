@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Home from "./components/Home"
 import Nav from "./components/Nav"
 import About from "./components/About"
+import Member from  "./components/Member"
 import {getVideos} from "./api/fetch.js"
 import './App.css';
 
@@ -24,6 +25,7 @@ useEffect(() => {
       <Routes>
         <Route path="/" element={<Home allVideos={allVideos}/>} />
         <Route path="/about" element={<About teamData={teamData}/>} />
+        <Route path="/about/:id" element={<Member  teamData={teamData} />} />
       </Routes>
      </Router>
     </div>
