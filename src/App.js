@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Home from "./Components/Home"
 import Nav from "./Components/Nav"
 import About from "./Components/About"
-import Member from  "./components/Member"
+import Member from  "./Components/Member"
 import {getVideos} from "./api/fetch.js"
 import './App.css';
 
