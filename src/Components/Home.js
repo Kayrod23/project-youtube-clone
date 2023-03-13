@@ -5,6 +5,7 @@ export default function Home({allVideos, modal, setModal}) {
         setModal(!modal)
     }
 
+
     return (
         <div>
             <form>
