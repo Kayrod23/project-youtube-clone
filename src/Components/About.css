@@ -1,0 +1,30 @@
+.all-team {
+    margin: 25px auto;
+    width: 70%;
+  }
+  
+  .teammembers {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .teammember {
+    border: 1px solid black;
+    border-radius: 3px;
+    display: block;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .teammember img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .teammember h3 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  
