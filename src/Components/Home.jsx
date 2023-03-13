@@ -22,7 +22,7 @@ export default function Home() {
 
     return (
         <div>
-            <SearchBar />
+            {/* <SearchBar /> */}
             <ErrorModal toggleModal={toggleModal} modal={modal}/>
             {/* {allVideos.items.map((video) => {return (
                 <h1>{video.etag}</h1>
