@@ -1,10 +1,20 @@
 import { useState } from "react";
-export const SearchBar = ({}) => {
+
+const key = process.env.REACT_APP_API_KEY;
+
+export const SearchBar = ({ setResultVideos }) => {
   const [val, setVal] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: use setQueue to add a new help request to the queue
+    return fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${val}&type=video`
+    )
+      .then((results) => results.json())
+      .then((response) => {
+        console.log(response);
+        setResultVideos(response);
+      });
   };
 
   const handleTextChange = (e) => {

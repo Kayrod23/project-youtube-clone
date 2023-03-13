@@ -11,7 +11,6 @@ import { teamData } from "./data/team.js";
 
 function App() {
   const [allVideos, setAllVideos] = useState([]);
-
   useEffect(() => {
     getVideos()
       .then((response) => {
@@ -25,7 +24,7 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" element={<Home allVideos={allVideos} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About teamData={teamData} />} />
           <Route path="/about/:id" element={<Member teamData={teamData} />} />
         </Routes>
