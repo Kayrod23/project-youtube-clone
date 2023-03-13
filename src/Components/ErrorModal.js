@@ -6,20 +6,28 @@ export default function ErrorModal ({ toggleModal, modal }) {
     // const toggleModal = () => {
     //     setModal(!modal)
     // }
+
+    if(modal) {
+        document.body.classList.add('limited')
+      } else {
+        document.body.classList.remove('limited')
+      }
+
     return (
         <>
         <button onClick={toggleModal}
         className="btn-modal">
-            Open
+            Test Modal
         </button>
-        {modal ? (<div className="modal">
-            <div className="modal-content">
-                <h2>Hello</h2>
-                <p>here</p>
+        {modal ? (
+        <div className="modal">
+            <div className="modalContent">
+                <p>Please submit a search above</p>
                 <button onClick={toggleModal}
-                className="close">Close</button>
+                className="closeBtn">X</button>
             </div>
-        </div>) : null}
+        </div>
+        ) : null}
         </>
     )
 }

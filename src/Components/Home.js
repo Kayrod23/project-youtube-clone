@@ -1,9 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import ErrorModal from "./ErrorModal"
 
 export default function Home({allVideos, modal, setModal}) {
     //const [modal , setModal] = useState(false);
-    //setModal(true)
     function toggleModal () {
         setModal(!modal)
     }
