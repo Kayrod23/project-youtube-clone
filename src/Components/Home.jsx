@@ -8,9 +8,7 @@ export default function Home({allVideos, modal, setModal}) {
 
     return (
         <div>
-            <form>
-                <input type="text" />
-            </form>
+            <SearchBar />
             <ErrorModal toggleModal={toggleModal} modal={modal}/>
             {/* {allVideos.items.map((video) => {return (
                 <h1>{video.etag}</h1>
