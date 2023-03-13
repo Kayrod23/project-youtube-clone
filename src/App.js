@@ -8,15 +8,11 @@ import {getVideos} from "./api/fetch.js"
 import './App.css';
 
 import { teamData } from "./data/team.js";
+import Video from "./Components/Video";
 
 function App() {
 const [allVideos, setAllVideos] = useState([]);
 const [modal , setModal] = useState(false);
-// useEffect(() => {
-//     getVideos().then(response => {
-//       setAllVideos(response)
-//     }).catch((error) => console.log(error))
-//   }, [])
 
   return (
     <div className="App">
@@ -26,6 +22,7 @@ const [modal , setModal] = useState(false);
         <Route path="/" element={<Home allVideos={allVideos} modal={modal} setModal={setModal}/>} />
         <Route path="/about" element={<About teamData={teamData}/>} />
         <Route path="/about/:id" element={<Member  teamData={teamData} />} />
+        <Route path="/video/:id" element={<Video/>} />
       </Routes>
      </Router>
     </div>
