@@ -8,7 +8,7 @@ export const SearchBar = ({ setResultVideos }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     return fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${val}&type=video`
+      `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${val}&type=video&`
     )
       .then((results) => results.json())
       .then((response) => {
