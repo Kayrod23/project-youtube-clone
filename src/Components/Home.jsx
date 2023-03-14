@@ -14,17 +14,17 @@ export default function Home() {
     }
     
   // Only for testing
-    useEffect(() => {
-    fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=ariana grande&key=${process.env.REACT_APP_API_KEY}`)
-    .then((results) => results.json())
-    .then(response => {
-        setAllVideos(response.items);
-        setModal(false);
-    })
-    .catch((error) => {
-        console.log(error);
-        setModal(true);
-    })},[])
+    // useEffect(() => {
+    // fetch (`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=ariana grande&key=${process.env.REACT_APP_API_KEY}`)
+    // .then((results) => results.json())
+    // .then(response => {
+    //     setAllVideos(response.items);
+    //     setModal(false);
+    // })
+    // .catch((error) => {
+    //     console.log(error);
+    //     setModal(true);
+    // })},[])
 // Only for testing
 
     return (
