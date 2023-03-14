@@ -11,13 +11,17 @@ export default function Home() {
     function toggleModal () {
         setModal(!modal);
     }
-    
+
+    console.log(modal)
+
     return (
         <div>
-             <SearchBar setResultVideos={setResultVideos} setModal={setModal} />
+            <SearchBar setResultVideos={setResultVideos} resVideos={resVideos} modal={modal} setModal={setModal} />
             <ErrorModal toggleModal={toggleModal} modal={modal}/>
             <section className="searchedvideos">
-                 {resVideos.map((video) => <VideosListing video={video} key={video.id.videoId} />)}
+                 {resVideos ? 
+                 resVideos.map((video) => <VideosListing video={video} key={video.id.videoId} />)
+                : null}
             </section>
         </div>
     )
