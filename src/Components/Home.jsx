@@ -1,7 +1,6 @@
 import { useState,useEffect } from "react";
 import ErrorModal from "./ErrorModal"
 import VideosListing from "./VideosListing"
-import SearchBar from "./SearchBar"
 import { SearchBar } from "./SearchBar";
 import "./Home.css";
 

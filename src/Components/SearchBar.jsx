@@ -2,13 +2,13 @@ import { useState } from "react";
 
 const key = process.env.REACT_APP_API_KEY;
 
- const SearchBar = ({ setResultVideos }) => {
+ export const SearchBar = ({ setResultVideos }) => {
   const [val, setVal] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     return fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${val}&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${val}&key=${key}`
     )
       .then((results) => results.json())
       .then((response) => {
@@ -28,4 +28,3 @@ const key = process.env.REACT_APP_API_KEY;
     </form>
   );
 };
-export default SearchBar
