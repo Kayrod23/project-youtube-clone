@@ -2,18 +2,18 @@ import { useState } from "react";
 
 const key = process.env.REACT_APP_API_KEY;
 
-export const SearchBar = ({ setResultVideos }) => {
+ const SearchBar = ({ setResultVideos }) => {
   const [val, setVal] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     return fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${val}&type=video&`
+      `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${val}&type=video&maxResults=10`
     )
       .then((results) => results.json())
       .then((response) => {
         console.log(response);
-        setResultVideos(response);
+        setResultVideos(response.items);
       });
   };
 
@@ -28,3 +28,4 @@ export const SearchBar = ({ setResultVideos }) => {
     </form>
   );
 };
+export default SearchBar
