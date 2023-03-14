@@ -14,7 +14,7 @@ export default function Home() {
     
     return (
         <div>
-             <SearchBar setResultVideos={setResultVideos} />
+             <SearchBar setResultVideos={setResultVideos} setModal={setModal} />
             <ErrorModal toggleModal={toggleModal} modal={modal}/>
             <section className="searchedvideos">
                  {resVideos.map((video) => <VideosListing video={video}  key={video.id.videoId} />)}
