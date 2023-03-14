@@ -17,8 +17,8 @@ export const SearchBar = ({ setResultVideos, resVideos, setModal, modal }) => {
         .then((response) => {
           setResultVideos(response.items);
           setModal(false);
-          if (resVideos === 0){
-            setModal("true");
+          if (resVideos.length){
+            setModal(true);
           }
         }).catch((error) => {
           console.log(error);
