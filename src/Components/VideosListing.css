@@ -1,0 +1,6 @@
+.video {
+    color: black;
+    display: grid;
+    grid-template-rows: auto auto;
+    padding: 10px 25px;
+  }
