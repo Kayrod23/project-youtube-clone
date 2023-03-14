@@ -1,12 +1,6 @@
 // import { useState } from "react"
 import "./ErrorModal.css"
 export default function ErrorModal ({ toggleModal, modal }) {
-    //const [modal , setModal] = useState(false)
-
-    // const toggleModal = () => {
-    //     setModal(!modal)
-    // }
-
     if(modal) {
         document.body.classList.add('limited')
       } else {

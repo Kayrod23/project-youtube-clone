@@ -9,15 +9,19 @@ export default function Home() {
     const [resVideos, setResultVideos] = useState([]);
 
     function toggleModal () {
-        setModal(!modal)
+        setModal(!modal);
     }
-    
+
+    console.log(modal)
+
     return (
         <div>
-             <SearchBar setResultVideos={setResultVideos} />
+            <SearchBar setResultVideos={setResultVideos} resVideos={resVideos} modal={modal} setModal={setModal} />
             <ErrorModal toggleModal={toggleModal} modal={modal}/>
             <section className="searchedvideos">
-                 {resVideos.map((video) => <VideosListing video={video}  key={video.id.videoId} />)}
+                 {resVideos ? 
+                 resVideos.map((video) => <VideosListing video={video} key={video.id.videoId} />)
+                : null}
             </section>
         </div>
     )
