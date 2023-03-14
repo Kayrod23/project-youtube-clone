@@ -1,11 +1,13 @@
 import { useState,useEffect } from "react";
 import ErrorModal from "./ErrorModal"
 import VideosListing from "./VideosListing"
+import { SearchBar } from "./SearchBar";
 import "./Home.css";
 
 export default function Home() {
     const [allVideos, setAllVideos] = useState([]);
     const [modal , setModal] = useState(false);
+    const [resVideos, setResultVideos] = useState([]);
 
     function toggleModal () {
         setModal(!modal)
@@ -27,7 +29,7 @@ export default function Home() {
 
     return (
         <div>
-            {/* <SearchBar /> */}
+             <SearchBar setResultVideos={setResultVideos} />
             <ErrorModal toggleModal={toggleModal} modal={modal}/>
             <section className="searchedvideos">
                  {allVideos.map((video) => <VideosListing video={video}  key={video.id.videoId} />)}
@@ -35,3 +37,4 @@ export default function Home() {
         </div>
     )
 }
+

@@ -12,8 +12,6 @@ const About = ({teamData}) => {
            <h3>Our Team</h3>
            <div className="teammembers">{teamMembers}</div>
         </article>
-        
-
       </section>  
       
     );
