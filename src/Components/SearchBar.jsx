@@ -8,7 +8,7 @@ const key = process.env.REACT_APP_API_KEY;
   const handleSubmit = (e) => {
     e.preventDefault();
     return fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?key=${key}&q=${val}&type=video&maxResults=10`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${val}&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((results) => results.json())
       .then((response) => {
