@@ -32,9 +32,8 @@ export default function Home() {
              <SearchBar setResultVideos={setResultVideos} />
             <ErrorModal toggleModal={toggleModal} modal={modal}/>
             <section className="searchedvideos">
-                 {allVideos.map((video) => <VideosListing video={video}  key={video.id.videoId} />)}
+                 {resVideos.map((video) => <VideosListing video={video}  key={video.id.videoId} />)}
             </section>
         </div>
     )
 }
-
