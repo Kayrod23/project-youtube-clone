@@ -39,6 +39,5 @@ export const SearchBar = ({ setResultVideos, resVideos, setModal, modal }) => {
         <input type="submit" value="Search" />
       </form>
     </div>
-
   );
 };
