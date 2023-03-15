@@ -1,6 +1,8 @@
 .searchedvideos{
+    width: 80%;
+    padding-left: 15%;
     display: grid;
-    gap: 15px;
+    gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     margin: 20px 0;
   }

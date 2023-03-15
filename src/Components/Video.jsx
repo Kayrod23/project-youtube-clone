@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube"
+import "./Video.css"
 
 export default function Video () {
     const opts = {
@@ -12,5 +13,10 @@ export default function Video () {
       };
       let vidId = useParams();
       console.log(vidId)
-    return <YouTube videoId={vidId.id} opts={opts} />
+    return (
+      <div className="playvideo">
+         <YouTube videoId={vidId.id} opts={opts} />
+      </div>
+         
+       )
 }

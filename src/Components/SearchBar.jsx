@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SearchBar.css"
 
 const key = process.env.REACT_APP_API_KEY;
 
@@ -22,9 +23,9 @@ const key = process.env.REACT_APP_API_KEY;
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" onChange={handleTextChange}></input>
-      <input type="submit" value="Search" />
+    <form onSubmit={handleSubmit} >
+      <input type="text"   onChange={handleTextChange} className="searchinpt" ></input>
+      <input type="submit"  value="Search"  className="searchSbmt"/>
     </form>
   );
 };

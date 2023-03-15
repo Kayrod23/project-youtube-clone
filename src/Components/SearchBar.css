@@ -1,0 +1,28 @@
+
+form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+.searchSbmt {
+    color: white;
+    background-color: red;
+    width: 100px;
+    height: 27px;
+
+}
+
+.searchSbmt:hover{
+ background-color: rgb(231, 109, 109);
+ cursor: pointer;
+}
+
+
+.searchinpt {
+    width: 50%;
+    height: 20px;
+    border: 2px solid black;
+    margin-right: 5px;
+}
