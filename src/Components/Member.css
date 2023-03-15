@@ -2,8 +2,8 @@
 
 .memberInfo {
     
-    width: 50%;
-    border-top: 2px solid rgb(144, 124, 6);
+    width: 55%;
+    border-top: 2px solid navy;
     border-radius: 5px;
     margin: 5px;
     padding: 3px;
@@ -28,16 +28,17 @@
 }
 
 .memberInfo2 {
-    width: 50%;
+    width: 55%;
     
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 
 .memberInfo3 {
-    width: 50%;
+    width: 55%;
     border-bottom: 2px solid navy;
     border-radius: 5px;
     display: flex;
