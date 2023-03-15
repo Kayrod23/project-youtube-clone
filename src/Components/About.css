@@ -18,9 +18,19 @@
   }
 
   .teammember img {
+    padding-bottom: 10px;
     width: 80px;
     height: 80px;
+    opacity: 0.8;
+   
   }
+
+  .teammember:hover img {
+   transform: scale(1.4);
+   opacity: 1; 
+  }
+
+  
   
   .teammember h3 {
     margin: 0;

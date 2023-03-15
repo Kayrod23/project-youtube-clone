@@ -5,6 +5,7 @@ import { db } from "./firebase/firebase"
 import { useState, useEffect } from "react";
 import { async } from "@firebase/util";
 // import { async } from "@firebase/util";
+import "./Video.css"
 
 export default function Video () {
 const [ comment, setComment ] = useState("");
@@ -59,7 +60,7 @@ console.log(allComments)
       let vidId = useParams();
 
     return (
-      <>
+      <div className="playvideo">
     <YouTube videoId={vidId.id} opts={opts} />
     <form onSubmit={handleSubmit}>
       <label>
@@ -83,6 +84,6 @@ console.log(allComments)
         </div> : null 
       )
     }) : null }
-      </>
+      </div>
     )
 }

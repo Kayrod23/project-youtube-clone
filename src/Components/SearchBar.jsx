@@ -1,12 +1,16 @@
 import { useState } from "react";
+import "./SearchBar.css"
 
 const key = process.env.REACT_APP_API_KEY;
 
+
 export const SearchBar = ({ setResultVideos, resVideos, setModal, modal }) => {
+
   const [val, setVal] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (val.length === 0) {
       setModal(true);
     } else {
@@ -26,6 +30,7 @@ export const SearchBar = ({ setResultVideos, resVideos, setModal, modal }) => {
         })
     }
     setVal("")
+
   };
 
   const handleTextChange = (e) => {
@@ -33,11 +38,11 @@ export const SearchBar = ({ setResultVideos, resVideos, setModal, modal }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={val} onChange={handleTextChange}/>
-        <input type="submit" value="Search" />
-      </form>
-    </div>
+
+    <form onSubmit={handleSubmit} >
+      <input type="text" value={val} onChange={handleTextChange} className="searchinpt" ></input>
+      <input type="submit"  value="Search"  className="searchSbmt"/>
+    </form>
+
   );
 };
