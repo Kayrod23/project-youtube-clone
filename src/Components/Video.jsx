@@ -3,8 +3,6 @@ import YouTube from "react-youtube"
 import { collection, addDoc, getDocs, query, orderBy, serverTimestamp, deleteDoc, doc, updateDoc } from "firebase/firestore"; 
 import { db } from "./firebase/firebase"
 import { useState, useEffect } from "react";
-import { async } from "@firebase/util";
-// import { async } from "@firebase/util";
 import "./Video.css"
 
 export default function Video () {
@@ -32,7 +30,7 @@ const [ allComments, setAllComments ] = useState([]);
 
   async function getComments () {
     let placeholder = []
-    const querySnapshot = await getDocs(query(collection(db, "comments"), orderBy("timestamp", "asc")));
+    const querySnapshot = await getDocs(query(collection(db, "comments"), orderBy("timestamp", "desc")));
     querySnapshot.forEach((doc) => {
     let data = doc.data();
     placeholder.push({data: data, id: doc.id});
@@ -43,6 +41,10 @@ console.log(allComments)
   useEffect(() => {
     getComments();
   }, [])
+
+  async function editComment (id) {
+
+  }
 
   async function deleteComment (id) {
     await deleteDoc(doc(db, "comments", id))
@@ -60,8 +62,10 @@ console.log(allComments)
       let vidId = useParams();
 
     return (
+      <>
       <div className="playvideo">
     <YouTube videoId={vidId.id} opts={opts} />
+    </div>
     <form onSubmit={handleSubmit}>
       <label>
         Name:
@@ -79,11 +83,12 @@ console.log(allComments)
          ytComments.data.videoId === vidId.id ?
           <div key={index}>
           <p><strong>{ytComments.data.Name}</strong></p>
-          <p>{ytComments.data.Comment}</p>
+          <p>{ytComments.data.Comment}</p> 
+          <button onClick={() => editComment(ytComments.id)}>Edit</button>
           <button onClick={() => deleteComment(ytComments.id)}>Delete</button>
         </div> : null 
       )
     }) : null }
-      </div>
+      </>
     )
 }

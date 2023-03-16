@@ -1,4 +1,3 @@
-// import { useState } from "react"
 import "./ErrorModal.css"
 export default function ErrorModal ({ toggleModal, modal }) {
     if(modal) {
@@ -9,10 +8,6 @@ export default function ErrorModal ({ toggleModal, modal }) {
 
     return (
         <>
-        <button onClick={toggleModal}
-        className="btn-modal">
-            Test Modal
-        </button>
         {modal ? (
         <div className="modal">
             <div className="modalContent">

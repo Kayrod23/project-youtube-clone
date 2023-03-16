@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyByZDCcltpOau0oIcm_tcDJeB7oSZ3Gtu0",
+  apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "project--clone-380116.firebaseapp.com",
   projectId: "project-youtube-clone-380116",
   storageBucket: "project-youtube-clone-380116.appspot.com",
