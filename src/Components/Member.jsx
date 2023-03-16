@@ -42,7 +42,7 @@ import isaiah from "../data/isaiah.jpeg";
           <div className="memberInfo2">
              <h5>{member.email}</h5>
              <Link to={member.linkedin}><button className="linkedin"></button></Link>
-             <Link to={member.website}><button className="github"></button></Link>
+             <a href={member.website}><button className="github"></button></a>
              {/* <Link to={member.linkedin}><h5>{member.linkedin}</h5></Link>
              <Link to={member.website}><h5>{member.website}</h5></Link> */}
 
