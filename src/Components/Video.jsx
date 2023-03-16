@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube"
-import { collection, addDoc, getDocs, query, orderBy, serverTimestamp, deleteDoc, doc, updateDoc } from "firebase/firestore"; 
+import { collection, addDoc, getDocs, query, orderBy, serverTimestamp, deleteDoc, doc } from "firebase/firestore"; 
 import { db } from "./firebase/firebase"
 import { useState, useEffect } from "react";
 import "./Video.css"
+// , updateDoc
 
 export default function Video () {
 const [ comment, setComment ] = useState("");

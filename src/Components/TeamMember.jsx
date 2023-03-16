@@ -19,11 +19,12 @@ const TeamMember = ({ member }) => {
   
   
     return (
+      <Link to={`/about/${member.id}`}>
       <article className="teammember">
-        <Link to={`/about/${member.id}`}><img src={ourimg} alt="member" /></Link>
+       <img src={ourimg} alt="member" />
         <h3>{name}</h3>
-       
       </article>
+      </Link>
     );
   };
   

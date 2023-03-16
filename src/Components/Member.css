@@ -1,7 +1,4 @@
-
-
 .memberInfo {
-    
     width: 55%;
     border-top: 2px solid navy;
     border-radius: 5px;
@@ -12,19 +9,20 @@
     justify-content:space-around;
     align-items: start;
     margin: 5px;
-    
 }
 
 .memberInfo img {
     border: 1px solid black;
     width: 180px;
-    height: 200px;
+    height: 190px;
+    margin-top: 10px;
+    box-shadow: 10px 5px 5px grey;
   }
 
 
 .memberInfo h2{
     margin-top: 15px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .memberInfo2 {
@@ -37,6 +35,26 @@
     
 }
 
+.linkedin {
+    background-image: url("../../public/linkedin-logo.png");
+    height: 30px;
+    width: 100px;
+    margin-top: 15px;
+}
+
+.github {
+    background-image: url("../../public/GitHub-logo.png");
+    height: 50px;
+    width: 90px;
+}
+
+.memberInfo2 button {
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 5px;
+    box-shadow: 7px 5px 5px grey;
+}
+
 .memberInfo3 {
     width: 55%;
     border-bottom: 2px solid navy;
@@ -46,9 +64,6 @@
     justify-content: space-between;
     border-bottom: 2px solid navy;
 }
-
-
-
 
 .centrado{
    margin-top: 30px;
@@ -66,7 +81,6 @@
 .linktoteam h5 {
     text-align: center;
     color: navy;
-    
 }
 
 .memberData {
@@ -76,7 +90,13 @@
    row-gap: 0px; 
 }
 
+.ourTeam {
+    margin-bottom: 30px;
+}
 
+.projectSum {
+    font-size: larger;
+}
 
 
 
