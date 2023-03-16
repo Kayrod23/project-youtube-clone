@@ -1,8 +1,22 @@
 .searchedvideos{
     width: 80%;
-    padding-left: 15%;
+    padding-left: 10%;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     margin: 20px 0;
+  }
+
+  .ytComments {
+    text-align: center;
+  }
+
+  .comments {
+    margin-left: 10%;
+  }
+
+  @media screen and (max-width: 900px)  {
+    .searchedvideos {
+      grid-template-columns: repeat(1, 1fr);
+      }
   }

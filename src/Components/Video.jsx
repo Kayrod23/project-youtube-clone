@@ -43,14 +43,15 @@ console.log(allComments)
     getComments();
   }, [])
 
-  async function editComment (id) {
+  // async function editComment (id) {
 
-  }
+  // }
 
   async function deleteComment (id) {
     await deleteDoc(doc(db, "comments", id))
     getComments();
   }
+  
     const opts = {
         height: '390',
         width: '640',
@@ -78,14 +79,14 @@ console.log(allComments)
       </label>
       <button type="submit">Submit</button>
     </form>
-    <h3>Comments</h3>
+    <h2 className="comments">Comments</h2>
     { allComments ? allComments.map((ytComments, index) => {
       return (
          ytComments.data.videoId === vidId.id ?
-          <div key={index}>
+          <div className="ytComments" key={index}>
           <p><strong>{ytComments.data.Name}</strong></p>
           <p>{ytComments.data.Comment}</p> 
-          <button onClick={() => editComment(ytComments.id)}>Edit</button>
+          {/* <button onClick={() => editComment(ytComments.id)}>Edit</button> */}
           <button onClick={() => deleteComment(ytComments.id)}>Delete</button>
         </div> : null 
       )
