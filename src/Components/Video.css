@@ -1,6 +1,19 @@
 .playvideo {
     margin-top: 20px;
+    margin: 20px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
+
+.form {
+    gap: 10px;
+    display: grid;
+    border: 2px solid black;
+    grid-template-columns: repeat(1, 1fr);
+    box-shadow: 5px 5px 5px grey;
+    padding: 15px;
+}
+
+
