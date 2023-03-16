@@ -9,10 +9,32 @@
 
   .ytComments {
     text-align: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 25% */
+  }
+
+  .commentSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .comments {
-    margin-left: 10%;
+    text-align: center;
+    height: 300px;
+    overflow: auto;
+    border: 2px solid black;
+    width: 70%;
+    min-width: 150px
+  }
+
+  /* .delete {
+    height: 25px; 
+  } */
+
+  .commentsH2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
   }
 
   @media screen and (max-width: 900px)  {

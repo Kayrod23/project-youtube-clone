@@ -68,8 +68,11 @@ console.log(allComments)
       <div className="playvideo">
     <YouTube videoId={vidId.id} opts={opts} />
     </div>
-    <form onSubmit={handleSubmit}>
-      <label>
+     <div className="commentSection">
+    <form onSubmit={handleSubmit} className="commentForm" >
+      <div className="form">
+      <h4>Leave a Comment!</h4>
+      <label className="name">
         Name:
         <input type="text" name="name" value={name} required onChange={(event) => setName(event.target.value)}/>
       </label>
@@ -78,8 +81,11 @@ console.log(allComments)
         <input name="comment" value={comment} required onChange={(event) => setComment(event.target.value)}/>
       </label>
       <button type="submit">Submit</button>
+      </div>
     </form>
-    <h2 className="comments">Comments</h2>
+
+      <div className="comments">
+    <h2 className="commentsH2">Comments</h2>
     { allComments ? allComments.map((ytComments, index) => {
       return (
          ytComments.data.videoId === vidId.id ?
@@ -87,10 +93,12 @@ console.log(allComments)
           <p><strong>{ytComments.data.Name}</strong></p>
           <p>{ytComments.data.Comment}</p> 
           {/* <button onClick={() => editComment(ytComments.id)}>Edit</button> */}
-          <button onClick={() => deleteComment(ytComments.id)}>Delete</button>
+          <button className="delete" onClick={() => deleteComment(ytComments.id)}>Delete</button>
         </div> : null 
       )
     }) : null }
+    </div>
+      </div>
       </>
     )
 }
