@@ -5,7 +5,6 @@ const key = process.env.REACT_APP_API_KEY;
 
 
 export const SearchBar = ({ setResultVideos, resVideos, setModal, modal }) => {
-
   const [val, setVal] = useState("");
 
   const handleSubmit = (e) => {
@@ -38,11 +37,11 @@ export const SearchBar = ({ setResultVideos, resVideos, setModal, modal }) => {
   };
 
   return (
-
+  <>
     <form onSubmit={handleSubmit} >
-      <input type="text" value={val} onChange={handleTextChange} className="searchinpt" ></input>
+      <input type="text" value={val} onChange={handleTextChange} className="searchinpt" placeholder="Search Here..."></input>
       <input type="submit"  value="Search"  className="searchSbmt"/>
     </form>
-
+  </>
   );
 };

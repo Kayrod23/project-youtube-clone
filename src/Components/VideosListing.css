@@ -1,6 +1,12 @@
 .video {
     color: black;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto;
     padding: 10px 25px;
+    text-align: center;
+  }
+
+  .video img {
+    box-shadow: 10px 5px 5px grey;
+    border: 5px solid red;
   }

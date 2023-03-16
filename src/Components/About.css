@@ -15,6 +15,7 @@
     display: block;
     padding: 25px;
     text-align: center;
+    box-shadow: 5px 5px 5px grey;
   }
 
   .teammember img {
@@ -22,14 +23,17 @@
     width: 80px;
     height: 80px;
     opacity: 0.8;
-   
+    box-shadow: 10px 5px 5px grey;
+  }
+
+  .teammember:hover{
+   transform: scale(1.1); 
+   box-shadow: 5px 5px 5px black;
   }
 
   .teammember:hover img {
-   transform: scale(1.4);
-   opacity: 1; 
+    opacity: 1;
   }
-
   
   
   .teammember h3 {

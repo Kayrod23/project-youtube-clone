@@ -27,8 +27,6 @@ import isaiah from "../data/isaiah.jpeg";
     return (
      <div>
         
-        
-    
       <div className="centrado">
 
       <h4>{member.pursuit}</h4>
@@ -36,15 +34,17 @@ import isaiah from "../data/isaiah.jpeg";
              <img src={ourimg} alt="Profile "></img>
              <div  className="memberData">
                 <h2>{member.firstName}  {member.lastName}</h2>
-                <h5>{member.place}</h5>
-                <h5>Birthday  {member.dob}</h5>
+                <h4>{member.place}</h4>
+                <h4>Birthday  {member.dob}</h4>
                
              </div>
           </div>
           <div className="memberInfo2">
              <h5>{member.email}</h5>
-             <Link to={member.linkedin}><h5>{member.linkedin}</h5></Link>
-             <Link to={member.website}><h5>{member.website}</h5></Link>
+             <Link to={member.linkedin}><button className="linkedin"></button></Link>
+             <Link to={member.website}><button className="github"></button></Link>
+             {/* <Link to={member.linkedin}><h5>{member.linkedin}</h5></Link>
+             <Link to={member.website}><h5>{member.website}</h5></Link> */}
 
           </div>
           <div className="memberInfo3">
@@ -55,7 +55,7 @@ import isaiah from "../data/isaiah.jpeg";
 
 
        </div>
-       <Link to={"/about"} className="linktoteam"><h5>back to Team</h5></Link>
+       <Link to={"/about"} className="linktoteam"><h5>Back to Team</h5></Link>
      </div>
     )
 }
